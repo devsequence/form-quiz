@@ -1,0 +1,203 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $Gilroy;
+}
+section {
+  position: relative;
+  z-index: 1;
+}
+.hidden {
+  display: none !important;
+}
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+span,
+.icon {
+  transition: all 150ms ease;
+}
+button{
+  cursor: pointer;
+}
+.btn-primary{
+  color: #F5F5F5;
+  background: #222222;
+  font-size: 18px;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 240px;
+  border-radius: 3px;
+  transition: all ease 300ms;
+  &:hover{
+    transform: translate(0, -5px);
+  }
+}
+.input, .textarea, .select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  border: 1px solid rgb(238,238, 238);
+  background-color: rgb(238,238, 238);
+  padding: 18px;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgb(82,82,82);
+  text-align: center;
+  outline: none;
+  width: 120px;
+  height: 60px;
+  transition: box-shadow 150ms ease;
+  &:focus{
+    border-color: rgb(205, 227, 254);
+    color: rgb(34,34, 34);
+    --tw-shadow: 0 0 0 4px #dbeafe;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+.textarea{
+  text-align: left;
+  width: 100%;
+  resize: vertical;
+  height: 320px;
+  padding: 18px 24px;
+}
+.select{
+  text-align: left;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='5' viewBox='0 0 9 5' width='9'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23222' stroke-linecap='round'%3E%3Cpath d='m.5.5 4 4'/%3E%3Cpath d='m4.5.5 4 4' transform='matrix(-1 0 0 1 13 0)'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: calc(100% - 17px) 51%;
+  background-repeat: no-repeat;
+}
+.radio-item{
+  label{
+    padding: 14px;
+    width: 200px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 52px;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #1C1C1C;
+    background: #E6E9ED;
+    border: 1px dashed #A0A6AF;
+    border-radius: 15px;
+    transition: all ease 300ms;
+    &:hover{
+      color: #FFFFFF;
+      background: #3E8945;
+      border: 1px solid #3E8945;
+    }
+  }
+  input{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+}
+.checkbox-item{
+  margin-bottom: 20px;
+  label{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 37px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 50px;
+    position: relative;
+    align-items: center;
+    color: rgba(28, 28, 28, 0.7);
+    transition: all ease 300ms;
+    &:before,
+    &:after{
+      position: absolute;
+      transition: all ease 300ms;
+      content: '';
+      width: 30px;
+      height: 30px;
+      left: 0;
+      top: 0;
+    }
+    &:before{
+      background: #E6E9ED;
+      border: 1px solid rgba(160, 166, 175, 0.5);
+      border-radius: 5px;
+    }
+    &:after{
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.80494 14.9458L7.87565 15.0165L7.94636 14.9458L16.8422 6.04992L16.9129 5.97921L16.8422 5.9085L15.9464 5.01266L15.8757 4.94195L15.8049 5.01266L7.87565 12.942L4.17553 9.24183L4.10482 9.17112L4.03411 9.24183L3.13827 10.1377L3.06756 10.2084L3.13827 10.2791L7.80494 14.9458Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+    }
+  }
+  input{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    &:checked{
+      & + label{
+        color: #1C1C1C;
+        &:before{
+          background: #3E8945;
+        }
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.tab-item{
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  margin-top: 50px;
+  opacity: 0;
+  transition: margin-top 0.7s ease, opacity 0.4s ease;
+  &.active{
+    visibility: visible;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    opacity: 1;
+  }
+}

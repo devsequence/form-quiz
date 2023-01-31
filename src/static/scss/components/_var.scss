@@ -1,0 +1,32 @@
+// genearl
+
+$white: #ffffff;
+$black: #000000;
+
+// main
+
+$primary: #252525;
+$default: #E96735;
+$gray: #C4C4C4;
+$gray: #AFA6A6;
+$red: #DE3F53;
+$black-100: #242424;
+$black-200: #181818;
+
+// info
+
+$danger: #f00;
+$success: #00b911;
+$info: #26badf;
+$warning: #fbf8db;
+
+// shades
+
+
+// mixins
+
+@mixin linear-gradient($direction, $fromColor, $toColor) {
+  background-color: $fromColor;
+  background-image: linear-gradient($direction, $fromColor, $toColor);
+}
+
