@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+	@@include('./includes/_head.html')
+</head>
+<body>
+<!--page-wrapper-->
+	<div class="page-wrapper" >
+		<div class="form-wrapper" style="background-image: url('../static/images/general/bg.png')">
+			<form action="#" class="form">
+				<div class="form-wrap form-wrap">
+					<div class="form-wrap__title">
+						<span class="current">2</span>/<span class="total">3</span>
+						A few follow-up questions
+						<a href="step-1.html">Back to previous step</a>
+					</div>
+					<div class="form-item form-item__wall" data-wall="">
+						<div class="form-item__title">Enter the width of your wall kitchen</div>
+						<div class="wall-item">
+							<div class="wall-item__media">
+								<img src="../static/images/general/kitchen-main-1.svg" alt="kitchen">
+							</div>
+							<div class="wall-item__props">
+								<div class="props-item">
+									<label for="wall_0">A</label>
+									<input type="text" name="measurements[wall][a]" value="" class="input" id="wall_0" autocomplete="false" placeholder="inches">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-item form-item__wall hidden" data-wall="">
+						<div class="form-item__title">Enter the width of the two sides in your l-shaped kitchen</div>
+						<div class="wall-item">
+							<div class="wall-item__media">
+								<img src="../static/images/general/kitchen-main-2.svg" alt="kitchen">
+							</div>
+							<div class="wall-item__props">
+								<div class="props-item">
+									<label for="l-kitchen_0">A</label>
+									<input type="text" name="measurements[l-kitchen][a]" value="" class="input" id="l-kitchen_0" autocomplete="false" placeholder="inches">
+								</div>
+								<div class="props-item">
+									<label for="l-kitchen_1">B</label>
+									<input type="text" name="measurements[l-kitchen][b]" value="" class="input" id="l-kitchen_1" autocomplete="false" placeholder="inches">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-item form-item__wall hidden" data-wall="">
+						<div class="form-item__title">Enter the width of the three sides in your u-shaped kitchen</div>
+						<div class="wall-item">
+							<div class="wall-item__media">
+								<img src="../static/images/general/kitchen-main-3.svg" alt="kitchen">
+							</div>
+							<div class="wall-item__props">
+								<div class="props-item">
+									<label for="u-kitchen_0">A</label>
+									<input type="text" name="measurements[u-kitchen][a]" value="" class="input" id="u-kitchen_0" autocomplete="false" placeholder="inches">
+								</div>
+								<div class="props-item">
+									<label for="u-kitchen_1">B</label>
+									<input type="text" name="measurements[u-kitchen][b]" value="" class="input" id="u-kitchen_1" autocomplete="false" placeholder="inches">
+								</div>
+								<div class="props-item">
+									<label for="u-kitchen_2">C</label>
+									<input type="text" name="measurements[u-kitchen][c]" value="" class="input" id="u-kitchen_2" autocomplete="false" placeholder="inches">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-item form-item__wall hidden" data-wall="">
+						<div class="form-item__title">Enter the width and depth of your kitchen island</div>
+						<div class="wall-item">
+							<div class="wall-item__media">
+								<img src="../static/images/general/kitchen-main-4.svg" alt="kitchen">
+							</div>
+							<div class="wall-item__props">
+								<div class="props-item">
+									<label for="island_0">A</label>
+									<input type="text" name="measurements[island][a]" value="" class="input" id="island_0" autocomplete="false" placeholder="inches">
+								</div>
+								<div class="props-item">
+									<label for="island_1">B</label>
+									<input type="text" name="measurements[island][b]" value="" class="input" id="island_1" autocomplete="false" placeholder="inches">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-item form-item__wall hidden" data-wall="">
+						<div class="form-item__title">Enter the width of the two sides in your galley kitchen</div>
+						<div class="wall-item">
+							<div class="wall-item__media">
+								<img src="../static/images/general/kitchen-main-5.svg" alt="kitchen">
+							</div>
+							<div class="wall-item__props">
+								<div class="props-item">
+									<label for="parallel_0">A</label>
+									<input type="text" name="measurements[parallel][a]" value="" class="input" id="parallel_0" autocomplete="false" placeholder="inches">
+								</div>
+								<div class="props-item">
+									<label for="island_1">B</label>
+									<input type="text" name="measurements[parallel][b]" value="" class="input" id="parallel_1" autocomplete="false" placeholder="inches">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-item form-item__wall hidden" data-wall="">
+						<div class="form-item__title">Enter the width of your high cabinet wall</div>
+						<div class="wall-item">
+							<div class="wall-item__media">
+								<img src="../static/images/general/kitchen-main-1.svg" alt="kitchen">
+							</div>
+							<div class="wall-item__props">
+								<div class="props-item">
+									<label for="high_0">A</label>
+									<input type="text" name="measurements[high][a]" value="" class="input" id="high_0" autocomplete="false" placeholder="inches">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-item form-item__photo" data-photo="">
+						<div class="form-item__title">Here, you can upload a photo, floor plan or homemade drawing of your kitchen</div>
+						<div class="photo-wrap" id="Filelist">
+                            <div class="image-item">
+                                <label class="file-input">
+                                    <input multiple="" id="files" type="file" name="files[]" accept="image/gif,image/jpg,image/jpeg,image/png,image/webp,application/pdf" class="file-input__input">
+                                    <span>Choose pictures or take new ones here</span>
+                                    <span class="btn-primary">Choose images</span>
+                                </label>
+                            </div>
+						</div>
+					</div>
+					<div class="form-item form-item__description" data-photo="">
+						<div class="form-item__title">We’re almost there! Is there anything else we should know about or pay special attention to regarding your project?</div>
+						<div class="description-item">
+							<textarea name="description" placeholder="Describe anything we should know…" class="textarea" id="description"></textarea>
+						</div>
+					</div>
+					<div class="form-item form-item__price" data-price="">
+						<div class="form-item__title">Please indicate how much you’re planning on investing in your full kitchen renovation and your ideal timeframe</div>
+						<div class="price">
+							<div class="select-item">
+								<select name="budget" class="select" id="budget">
+									<option value="" selected=""></option>
+									<option value="Less than $25,000">Less than $25,000</option>
+									<option value="$25,000–50,000">$25,000–50,000</option>
+									<option value="$50,000–75,000">$50,000–75,000</option>
+									<option value="$75,000–100,000">$75,000–100,000</option>
+									<option value="More than $100,000">More than $100,000</option>
+								</select>
+								<span>Total budget</span>
+							</div>
+							<div class="select-item">
+								<select name="time_to_installation" class="select">
+									<option value="" selected=""></option>
+									<option value="2-3_months">2–3 months</option>
+									<option value="3-6_months" >3–6 months</option>
+									<option value="6-12_months">6–12 months</option>
+									<option value="1_year">More than a year</option>
+								</select>
+								<span>Time to installation</span>
+							</div>
+						</div>
+					</div>
+					<div class="btn-block">
+						<a href="step-3.html" class="btn-primary">
+							Proceed to last step
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+<!--end-page-wrapper-->
+@@include('./includes/_scripts.html')
+<script type="text/javascript" src="../static/js/uploadImage.js"></script>
+</body>
+</html>

@@ -329,6 +329,7 @@ button {
     display: flex;
     align-items: center;
     position: sticky;
+    color: #222;
     top: 0;
     z-index: 2;
     font-size: 20px;
@@ -345,6 +346,26 @@ button {
     .form-wrap__title .total {
       display: inline-block;
       margin-right: 10px; }
+    .form-wrap__title a {
+      color: #222;
+      margin: 0 0 0 auto;
+      font-size: 20px;
+      opacity: 0.3;
+      position: relative; }
+      .form-wrap__title a:before {
+        position: absolute;
+        content: '';
+        width: 9px;
+        height: 9px;
+        left: -10px;
+        top: 50%;
+        margin-top: -4px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='9' viewBox='0 0 5 9' width='5'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23222' stroke-linecap='round' transform='matrix(0 1 -1 0 5 0)'%3E%3Cpath d='m.5.5 4 4'/%3E%3Cpath d='m4.5.5 4 4' transform='matrix(-1 0 0 1 13 0)'/%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain; }
+      .form-wrap__title a:hover {
+        opacity: 1;
+        transform: translate(-5px, 0); }
 
 .form-item {
   max-width: 768px;
@@ -482,9 +503,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0 auto;
   height: 230px;
-  width: 33.333%;
   border-width: 1px;
   border-style: dashed;
   border-color: #c3c3c3;
@@ -499,6 +518,7 @@ button {
     position: absolute;
     z-index: -1; }
   .file-input span {
+    opacity: .4;
     max-width: 150px;
     text-align: center;
     justify-content: center;
@@ -508,7 +528,8 @@ button {
   .file-input .btn-primary {
     max-width: 130px;
     height: 40px;
-    font-size: 16px; }
+    font-size: 16px;
+    opacity: 1; }
   .file-input:hover {
     --tw-border-opacity: 1;
     border-color: #a3a3a3;
@@ -529,7 +550,7 @@ button {
     .select-item select:focus + span, .select-item select.entered + span {
       font-size: 0.875rem;
       line-height: 1.25rem;
-      top: 9px; }
+      top: 5px; }
   .select-item span {
     pointer-events: none;
     position: absolute;
@@ -544,6 +565,130 @@ button {
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms; }
+
+.form-information {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 660px;
+  margin: 0 auto; }
+  .form-information .select-item {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 12px;
+    max-width: unset;
+    margin: 0 0 16px; }
+    .form-information .select-item span {
+      top: 18px;
+      left: 30px; }
+  .form-information .input-label {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 12px;
+    margin-bottom: 16px;
+    position: relative; }
+    .form-information .input-label span {
+      pointer-events: none;
+      position: absolute;
+      top: 18px;
+      left: 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #a3a3a3;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms; }
+
+.input-label input {
+  width: 100%;
+  text-align: left; }
+  .input-label input:focus + span, .input-label input.entered + span {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    top: 5px; }
+
+.modal-group {
+  max-width: 400px;
+  margin: 50px auto 0; }
+  .modal-group input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -1; }
+    .modal-group input:checked + label:after {
+      opacity: 1; }
+  .modal-group label {
+    position: relative;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    color: #222222;
+    padding-left: 30px; }
+    .modal-group label:before, .modal-group label:after {
+      position: absolute;
+      content: '';
+      width: 19px;
+      height: 19px;
+      left: 0;
+      top: 2px; }
+    .modal-group label:before {
+      border: 1px solid #222;
+      border-radius: 3px; }
+    .modal-group label:after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='8' viewBox='0 0 12 8' width='12'%3E%3Cpath d='m0 3 3 3 6-6' fill='none' stroke='%23222' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' transform='translate(1.5 1)'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0; }
+
+.thumb-Images {
+  display: flex;
+  flex-wrap: wrap; }
+
+.photo-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.image-item {
+  width: 33.33333%;
+  box-sizing: border-box;
+  padding: 12px;
+  text-align: center; }
+  .image-item .close {
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    padding-top: 5px;
+    text-align: center;
+    line-height: 1.5rem;
+    opacity: 0.4;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    font-size: 14px; }
+    .image-item .close:hover {
+      opacity: .8; }
+
+.img-wrap {
+  overflow: hidden;
+  height: 230px;
+  width: 100%;
+  max-height: 240px;
+  max-width: 240px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5; }
+  .img-wrap img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; }
 
 @media screen and (max-width: 1110px) {
   .form-wrap {
@@ -566,9 +711,43 @@ button {
   .form-item.form-item__variant .form-item__button {
     width: 50%; }
     .form-item.form-item__variant .form-item__button label {
-      height: auto; } }
+      height: auto; }
+  .wall-item__media {
+    max-width: 370px;
+    width: 100%; }
+  .props-item {
+    max-width: 280px;
+    width: 100%; } }
+
+@media screen and (max-width: 568px) {
+  .wall-item {
+    flex-wrap: wrap; }
+  .wall-item__media {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px; }
+  .props-item {
+    max-width: unset;
+    width: auto; }
+  .wall-item__props {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .price {
+    flex-wrap: wrap; }
+    .price .select-item {
+      width: 100%;
+      margin: 0 0 16px; }
+  .form-information {
+    margin: 0 0 0; }
+    .form-information .input-label, .form-information .select-item {
+      width: 100%;
+      padding: 0; } }
 
 @media screen and (max-width: 480px) {
+  .form-wrap__title {
+    height: 70px;
+    font-size: 16px; }
   .form-wrap {
     margin: 0 auto;
     padding: 0 10px 50px; }

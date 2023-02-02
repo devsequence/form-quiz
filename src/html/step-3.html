@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	@@include('./includes/_head.html')
+</head>
+<body>
+<!--page-wrapper-->
+	<div class="page-wrapper" >
+		<div class="form-wrapper" style="background-image: url('../static/images/general/bg.png')">
+			<form action="#" class="form">
+				<div class="form-wrap">
+					<div class="form-wrap__title">
+						<span class="current">3</span>/<span class="total">3</span>
+						Your contact details
+						<a href="step-2.html">Back to previous step</a>
+					</div>
+					<div class="form-item form-item__form" data-form="">
+						<div class="form-item__title">Who should we send the price estimate to?</div>
+					</div>
+					<div class="form-information">
+						<label class="input-label">
+							<input type="text" name="first_name" value="" inputmode="text" class="input" autocomplete="given-name" required="">
+							<span> First name *</span>
+						</label>
+						<label class="input-label">
+							<input type="text" name="last_name" value="" inputmode="text" class="input" autocomplete="family-name" required="">
+							<span> Surname *</span>
+						</label>
+						<label class="input-label">
+							<input type="email" name="email" value="" inputmode="text" class="input" autocomplete="email" required="">
+							<span> Email address *</span>
+						</label>
+						<label class="input-label">
+							<input type="tel" name="phone" value="" inputmode="text" class="input" autocomplete="tel" required="">
+							<span> Phone number *</span>
+						</label>
+
+						<div class="select-item">
+							<select name="country" class="select" required="">
+								<option value="" selected="" disabled=""></option>
+								<option value="US">United States</option>
+								<option value="CA">Canada</option>
+								<option value="MX">Mexico</option>
+								<option disabled="">—</option>
+								<option value="AT">Austria</option>
+								<option value="BE">Belgium</option>
+								<option value="BG">Bulgaria</option>
+								<option value="CA">Canada</option>
+								<option value="HR">Croatia</option>
+								<option value="CY">Cyprus</option>
+								<option value="CZ">Czech Republic</option>
+								<option value="DK">Denmark</option>
+								<option value="EE">Estonia</option>
+								<option value="FO">Faroe Islands</option>
+								<option value="FI">Finland</option>
+								<option value="FR">France</option>
+								<option value="DE">Germany</option>
+								<option value="GR">Greece</option>
+								<option value="GL">Greenland</option>
+								<option value="HU">Hungary</option>
+								<option value="IS">Iceland</option>
+								<option value="IE">Ireland</option>
+								<option value="IT">Italy</option>
+								<option value="LV">Latvia</option>
+								<option value="LI">Liechtenstein</option>
+								<option value="LT">Lithuania</option>
+								<option value="LU">Luxembourg</option>
+								<option value="MT">Malta</option>
+								<option value="MX">Mexico</option>
+								<option value="NL">Netherlands</option>
+								<option value="NO">Norway</option>
+								<option value="PL">Poland</option>
+								<option value="PT">Portugal</option>
+								<option value="RO">Romania</option>
+								<option value="SK">Slovakia</option>
+								<option value="SI">Slovenia</option>
+								<option value="ES">Spain</option>
+								<option value="SE">Sweden</option>
+								<option value="CH">Switzerland</option>
+								<option value="GB">United Kingdom</option>
+								<option value="US">United States</option>
+								<option disabled="">—</option>
+								<option value="00">Rest of the world</option>
+							</select>
+							<span>Country *</span>
+						</div>
+						<div class="select-item">
+							<select name="inquiry_type" class="select" required="">
+								<option value="" selected="" disabled=""></option>
+								<option value="Homeowner">Homeowner</option>
+								<option value="Architect">Architect</option>
+								<option value="Interior Designer">Interior Designer</option>
+								<option value="Contractor">Contractor</option>
+								<option value="Developer">Developer</option>
+							</select>
+							<span>Type of inquiry *</span>
+						</div>
+						<label class="input-label">
+							<input type="text" name="city" value="" inputmode="text" class="input" autocomplete="address-level2">
+							<span>City</span>
+						</label>
+					</div>
+					<div class="modal-group">
+						<input type="checkbox" name="consent" id="contact_consent" value="1" class=" input-checkbox__input">
+						<label for="contact_consent">
+							I accept that Reform will contact me using the information in this form. *
+						</label>
+					</div>
+					<div class="btn-block">
+						<button type="submit" class="btn-primary">
+							Submit request
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+<!--end-page-wrapper-->
+@@include('./includes/_scripts.html')
+</body>
+</html>
